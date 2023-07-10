@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class OrderControllerV3 {
 
+	// v3 - 컴포넌트 스캔으로 스프링 빈 자동 등록
+	
     private final OrderServiceV3 orderService;
 
     public OrderControllerV3(OrderServiceV3 orderService) {

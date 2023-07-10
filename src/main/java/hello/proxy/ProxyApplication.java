@@ -40,5 +40,7 @@ public class ProxyApplication {
 	public LogTrace logTrace() {
 		return new ThreadLocalLogTrace();
 	}
-
+	
+	/* scanBasePackages 한 이유 : config 하위 파일들은 컴포넌트 스캔을 안하고, 별도로 한개씩 수동으로 임포트 @Import 하기 위함
+	 * */
 }
