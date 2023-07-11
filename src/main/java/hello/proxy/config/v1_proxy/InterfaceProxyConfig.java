@@ -13,6 +13,7 @@ public class InterfaceProxyConfig {
 
     @Bean
     public OrderControllerV1 orderController(LogTrace logTrace) {
+    	// LogTrace 를 스프링 빈으로 등록하면 파라미터로 주입받을 수 있다.
         OrderControllerV1Impl controllerImpl = new OrderControllerV1Impl(orderService(logTrace));
         return new OrderControllerInterfaceProxy(controllerImpl, logTrace);
     }
